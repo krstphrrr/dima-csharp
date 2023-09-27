@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  dima-extract:
+    container_name: dima-cscript
+    build: .
+    image: dima-cscript
+    volumes:
+      - ./output:/app/output
+    networks:
+      - pg-network
+networks:
+  pg-network:
+    external: true
